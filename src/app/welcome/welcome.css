@@ -1,0 +1,12 @@
+.topDiv {
+  padding: 20px;
+}
+.welcomeImage {
+  width: 500px;
+  height: 500px;
+}
+.imageBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
