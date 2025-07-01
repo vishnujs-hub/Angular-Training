@@ -9,9 +9,10 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { Welcome } from './welcome/welcome';
 import { UserStyle } from './user-style/user-style';
+import { ClassComponent } from './class-component/class-component';
 
 @NgModule({
-  declarations: [App, Welcome, UserStyle],
+  declarations: [App, Welcome, UserStyle, ClassComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [
     provideBrowserGlobalErrorListeners(),
