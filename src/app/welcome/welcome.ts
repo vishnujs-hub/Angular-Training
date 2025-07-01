@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
   templateUrl: './welcome.html',
   styleUrl: './welcome.css',
 })
-export class Welcome {}
+export class Welcome {
+  isTrue: boolean = false;
+  username: string = 'Jadan Smith';
+
+  onClick = () => {
+    this.isTrue = !this.isTrue;
+  };
+}

@@ -1,6 +1,15 @@
 <div class="topDiv">
-  <h2>Welcome to Angular</h2>
+  <h2>Welcome to Angular {{ username }}</h2>
   <h3>Let's get started</h3>
+  <div style="display: flex; justify-content: center; margin-top: 10px">
+    <button
+      (click)="onClick()"
+      [style.background-color]="isTrue ? 'blue' : 'green'"
+      class="buttonClass"
+    >
+      Click me to change color
+    </button>
+  </div>
   <div class="imageBox">
     <img src="images/welcome-image.jpg" alt="welcome" class="welcomeImage" />
   </div>
