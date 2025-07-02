@@ -10,10 +10,11 @@ import { App } from './app';
 import { Welcome } from './welcome/welcome';
 import { UserStyle } from './user-style/user-style';
 import { ClassComponent } from './class-component/class-component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [App, Welcome, UserStyle, ClassComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),

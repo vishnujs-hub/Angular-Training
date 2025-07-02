@@ -6,4 +6,14 @@ import { Component } from '@angular/core';
   templateUrl: './user-style.html',
   styleUrl: './user-style.css',
 })
-export class UserStyle {}
+export class UserStyle {
+  employee: object = {
+    name: '',
+    email: '',
+    contact: '',
+  };
+
+  onSubmit() {
+    console.log('employee form', this.employee);
+  }
+}

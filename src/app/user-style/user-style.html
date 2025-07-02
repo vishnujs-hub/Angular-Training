@@ -1,9 +1,32 @@
-<div class="ulList">
-  <ul>
-    <li>Allen</li>
-    <li>Arnold</li>
-    <li>Vans</li>
-    <li>Jammie</li>
-    <li>Burns</li>
-  </ul>
-</div>
+<form (ngSubmit)="onSubmit()">
+  <div class="formMainDiv">
+    <div class="formDiv">
+      <h2>Employee Registration Form</h2>
+      <label class="label">Name</label>
+      <input
+        name="name"
+        type="text"
+        class="inputClass"
+        [(ngModel)]="employee.name"
+        required
+      />
+      <label class="label">Email</label>
+      <input
+        name="email"
+        type="email"
+        class="inputClass"
+        [(ngModel)]="employee.email"
+        required
+      />
+      <label class="label">Mobile</label>
+      <input
+        name="contact"
+        type="number"
+        class="inputClass"
+        [(ngModel)]="employee.contact"
+        required
+      />
+      <button class="buttonClass">Submit</button>
+    </div>
+  </div>
+</form>
