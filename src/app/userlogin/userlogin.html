@@ -1,0 +1,31 @@
+<form (ngSubmit)="onSubmit()">
+  <div class="formMainDiv">
+    <div class="formDiv">
+      <h2>Login Form</h2>
+      <label class="label">Email</label>
+      <input
+        name="email"
+        type="email"
+        class="inputClass"
+        [(ngModel)]="user.email"
+        required
+      />
+      <label class="label">Password</label>
+      <input
+        name="password"
+        type="password"
+        class="inputClass"
+        [(ngModel)]="user.password"
+        required
+      />
+      <button class="buttonClass">Submit</button>
+      <p
+        *ngIf="message"
+        [ngStyle]="{ color: message === 'You have access' ? 'green' : 'red' }"
+        class="errorCard"
+      >
+        {{ message }}
+      </p>
+    </div>
+  </div>
+</form>

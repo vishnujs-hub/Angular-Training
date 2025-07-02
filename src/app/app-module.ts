@@ -11,9 +11,10 @@ import { Welcome } from './welcome/welcome';
 import { UserStyle } from './user-style/user-style';
 import { ClassComponent } from './class-component/class-component';
 import { FormsModule } from '@angular/forms';
+import { Userlogin } from './userlogin/userlogin';
 
 @NgModule({
-  declarations: [App, Welcome, UserStyle, ClassComponent],
+  declarations: [App, Welcome, UserStyle, ClassComponent, Userlogin],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [
     provideBrowserGlobalErrorListeners(),

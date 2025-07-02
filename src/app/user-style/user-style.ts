@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
 
+interface Employee {
+  name: string;
+  email: string;
+  contact: string;
+}
+
 @Component({
   selector: '[user-style]',
   standalone: false,
@@ -7,7 +13,7 @@ import { Component } from '@angular/core';
   styleUrl: './user-style.css',
 })
 export class UserStyle {
-  employee: object = {
+  employee: Employee = {
     name: '',
     email: '',
     contact: '',
