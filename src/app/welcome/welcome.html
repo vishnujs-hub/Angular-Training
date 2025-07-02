@@ -4,7 +4,7 @@
   <div style="display: flex; justify-content: center; margin-top: 10px">
     <button
       (click)="onClick()"
-      [style.background-color]="isTrue ? 'blue' : 'green'"
+      [ngClass]="isTrue ? 'buttonTrueClass' : 'buttonFalseClass'"
       class="buttonClass"
     >
       Click me to change color
