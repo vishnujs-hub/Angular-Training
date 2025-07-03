@@ -10,6 +10,7 @@ interface EmployeeObject {
   styleUrl: './employee.css',
 })
 export class Employee {
+  selectedBook: string = '';
   employee: EmployeeObject[] = [
     { name: 'Ben Johnson', email: 'ben@gmail,com' },
     { name: 'Adam Smith', email: 'adamsmith@gmail,com' },

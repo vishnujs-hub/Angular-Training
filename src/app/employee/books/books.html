@@ -1,0 +1,15 @@
+<div class="bookMainDiv">
+  <label for="books" class="label">Choose a book:</label>
+
+  <select
+    name="books"
+    id="books"
+    (change)="onBookChange($event)"
+    [value]="selectedBook"
+    [(ngModel)]="selectedBook"
+    aria-placeholder="Please select a book"
+  >
+    <option value="" disabled selected>Select a book</option>
+    <option *ngFor="let book of books" [value]="book">{{ book }}</option>
+  </select>
+</div>

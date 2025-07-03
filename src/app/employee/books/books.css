@@ -1,0 +1,12 @@
+select {
+  padding: 8px;
+  margin-top: 20px;
+  width: 300px;
+}
+
+.bookMainDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

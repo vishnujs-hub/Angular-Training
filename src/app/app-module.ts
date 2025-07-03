@@ -14,9 +14,10 @@ import { FormsModule } from '@angular/forms';
 import { Userlogin } from './userlogin/userlogin';
 import { Employee } from './employee/employee';
 import { EmployeeList } from './employee/employee-list/employee-list';
+import { Books } from './employee/books/books';
 
 @NgModule({
-  declarations: [App, Welcome, UserStyle, ClassComponent, Userlogin, Employee, EmployeeList],
+  declarations: [App, Welcome, UserStyle, ClassComponent, Userlogin, Employee, EmployeeList, Books],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [
     provideBrowserGlobalErrorListeners(),
