@@ -14,12 +14,11 @@ export class Books {
     'Monk who sold his ferrari',
     'Marshak mak',
   ];
-  selectedBook: string = '';
 
-  onBookChange(event: any) {
-    const selected = event.target.value;
+  onBookChange(book: string) {
+    const selected = book;
     console.log('selected', selected);
-    this.selectedBook = selected;
+  
     this.bookSelected.emit(selected);
   }
 }
