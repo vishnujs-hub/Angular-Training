@@ -4,3 +4,22 @@
 <p *ngIf="selectedBook" class="selected">
   Selected book is <b>{{ selectedBook }}</b>
 </p>
+
+<h2>Search Employee</h2>
+<div>
+  <input
+    #viewInput
+    type="text"
+    placeholder="Enter employee name"
+    class="inputClass"
+  />
+  <button (click)="searchEmployee()">Search</button>
+</div>
+
+<div *ngIf="searchedEmployee">
+  <p>{{ searchedEmployee.name }}</p>
+  <p>{{ searchedEmployee.email }}</p>
+</div>
+<div *ngIf="error">
+  <p>{{ error }}</p>
+</div>

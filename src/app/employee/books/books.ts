@@ -10,7 +10,7 @@ export class Books {
   @Output() bookSelected = new EventEmitter<string>();
   books: string[] = [
     'Alchemist',
-    "Man who's search for meaning",
+    "Man's search for meaning",
     'Monk who sold his ferrari',
     'Marshak mak',
   ];
@@ -18,7 +18,6 @@ export class Books {
   onBookChange(book: string) {
     const selected = book;
     console.log('selected', selected);
-  
     this.bookSelected.emit(selected);
   }
 }
