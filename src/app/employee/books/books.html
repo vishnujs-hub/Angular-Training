@@ -7,7 +7,6 @@
     (change)="onBookChange($event)"
     [value]="selectedBook"
     [(ngModel)]="selectedBook"
-    aria-placeholder="Please select a book"
   >
     <option value="" disabled selected>Select a book</option>
     <option *ngFor="let book of books" [value]="book">{{ book }}</option>
