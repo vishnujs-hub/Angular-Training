@@ -1,3 +1,5 @@
 <ul>
-  <li>{{ employee.name }}</li>
+  <li [ngStyle]="{ color: highlight ? 'green' : 'black' }">
+    {{ employee.name }}
+  </li>
 </ul>

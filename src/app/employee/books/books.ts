@@ -15,8 +15,8 @@ export class Books {
     'Marshak mak',
   ];
 
-  onBookChange(book: string) {
-    const selected = book;
+  onBookChange(event: any) {
+    const selected = event.target.value;
     console.log('selected', selected);
     this.bookSelected.emit(selected);
   }

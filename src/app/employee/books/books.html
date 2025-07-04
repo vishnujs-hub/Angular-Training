@@ -1,7 +1,7 @@
 <div class="bookMainDiv">
   <label for="books" class="label">Choose a book:</label>
 
-  <select name="books" id="books" (change)="onBookChange($event.target.value)">
+  <select name="books" id="books" (change)="onBookChange($event)">
     <option value="" disabled selected>Select a book</option>
     <option *ngFor="let book of books" [value]="book">{{ book }}</option>
   </select>
