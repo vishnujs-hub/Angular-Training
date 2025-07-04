@@ -21,6 +21,9 @@ export class Employee {
   @ViewChildren(EmployeeList)
   employeeComponents!: QueryList<EmployeeList>;
   selectedBook: string = '';
+  @ViewChildren('listValue', {})
+  listValue!: QueryList<ElementRef>;
+
   // searchedEmployee!: {};
   // error!: string;
   employee: EmployeeObject[] = [
@@ -38,9 +41,21 @@ export class Employee {
     const inputValue = this.viewInput.nativeElement.value
       .replace(/\s+/g, '')
       .toLowerCase();
-    console.log('input', inputValue, this.employeeComponents);
-    this.employeeComponents.forEach((empComp) => {
-      empComp.highlightIfMatch(inputValue);
+    console.log('input', inputValue, this.listValue);
+    // this.employeeComponents.forEach((empComp) => {
+    //   empComp.highlightIfMatch(inputValue);
+    // });
+    this.listValue.forEach((list) => {
+      const el = list.nativeElement;
+
+      const name = el.textContent?.replace(/\s+/g, '').toLowerCase();
+      console.log('el', name);
+
+      if (inputValue && name === inputValue) {
+        el.style.color = 'green';
+      } else {
+        el.style.color = '';
+      }
     });
   }
 }

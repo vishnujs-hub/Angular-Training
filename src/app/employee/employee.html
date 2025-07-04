@@ -18,6 +18,10 @@
   <button (click)="searchEmployee()">Search</button>
 </div>
 
+<ul>
+  <li *ngFor="let emp of employee" #listValue>{{ emp.name }}</li>
+</ul>
+
 <!-- <div *ngIf="searchedEmployee">
   <p>{{ searchedEmployee.name }}</p>
   <p>{{ searchedEmployee.email }}</p>
