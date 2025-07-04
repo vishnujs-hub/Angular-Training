@@ -24,8 +24,8 @@ export class Employee {
   @ViewChildren('listValue', {})
   listValue!: QueryList<ElementRef>;
 
-  // searchedEmployee!: {};
-  // error!: string;
+  searchedEmployee!: {};
+  error!: string;
   employee: EmployeeObject[] = [
     { name: 'Ben Johnson', email: 'ben@gmail.com' },
     { name: 'Adam Smith', email: 'adamsmith@gmail.com' },
@@ -42,20 +42,30 @@ export class Employee {
       .replace(/\s+/g, '')
       .toLowerCase();
     console.log('input', inputValue, this.listValue);
+    const found = this.employee.find(
+      (emp) => emp.name.replace(/\s+/g, '').toLowerCase() === inputValue
+    );
+    if (found) {
+      this.searchedEmployee = found;
+      this.error = '';
+    } else {
+      this.searchedEmployee = '';
+      this.error = 'No employee found';
+    }
     // this.employeeComponents.forEach((empComp) => {
     //   empComp.highlightIfMatch(inputValue);
     // });
-    this.listValue.forEach((list) => {
-      const el = list.nativeElement;
+    // this.listValue.forEach((list) => {
+    //   const el = list.nativeElement;
 
-      const name = el.textContent?.replace(/\s+/g, '').toLowerCase();
-      console.log('el', name);
+    //   const name = el.textContent?.replace(/\s+/g, '').toLowerCase();
+    //   console.log('el', name);
 
-      if (inputValue && name === inputValue) {
-        el.style.color = 'green';
-      } else {
-        el.style.color = '';
-      }
-    });
+    //   if (inputValue && name === inputValue) {
+    //     el.style.color = 'green';
+    //   } else {
+    //     el.style.color = '';
+    //   }
+    // });
   }
 }

@@ -18,14 +18,14 @@
   <button (click)="searchEmployee()">Search</button>
 </div>
 
-<ul>
+<!-- <ul>
   <li *ngFor="let emp of employee" #listValue>{{ emp.name }}</li>
-</ul>
+</ul> -->
 
-<!-- <div *ngIf="searchedEmployee">
+<ng-container *ngIf="searchedEmployee; else errormsg">
   <p>{{ searchedEmployee.name }}</p>
   <p>{{ searchedEmployee.email }}</p>
-</div>
-<div *ngIf="error">
+</ng-container>
+<ng-container #errormsg>
   <p>{{ error }}</p>
-</div> -->
+</ng-container>
