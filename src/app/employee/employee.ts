@@ -24,7 +24,7 @@ export class Employee {
   @ViewChildren('listValue', {})
   listValue!: QueryList<ElementRef>;
 
-  searchedEmployee!: {};
+  searchedEmployee!: any;
   error!: string;
   employee: EmployeeObject[] = [
     { name: 'Ben Johnson', email: 'ben@gmail.com' },
@@ -49,7 +49,7 @@ export class Employee {
       this.searchedEmployee = found;
       this.error = '';
     } else {
-      this.searchedEmployee = '';
+      this.searchedEmployee = {};
       this.error = 'No employee found';
     }
     // this.employeeComponents.forEach((empComp) => {

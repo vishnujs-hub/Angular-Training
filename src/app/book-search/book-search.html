@@ -1,0 +1,18 @@
+<h2>Search Books</h2>
+<div [ngStyle]="{ padding: '10px' }">
+  <ul>
+    <li *ngFor="let book of books">{{ book }}</li>
+  </ul>
+  <ng-container>
+    <input
+      type="text"
+      placeholder="Enter book name"
+      class="inputClass"
+      [(ngModel)]="inputValue"
+      (input)="onChange()"
+    />
+    <br />
+    <br />
+  </ng-container>
+</div>
+<book-list [filteredBooks]="filteredBooks"></book-list>
