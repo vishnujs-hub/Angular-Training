@@ -17,9 +17,10 @@ import { EmployeeList } from './employee/employee-list/employee-list';
 import { Books } from './employee/books/books';
 import { BookSearch } from './book-search/book-search';
 import { BookList } from './book-search/book-list/book-list';
+import { ChatApplication } from './chat-application/chat-application';
 
 @NgModule({
-  declarations: [App, Welcome, UserStyle, ClassComponent, Userlogin, Employee, EmployeeList, Books, BookSearch, BookList],
+  declarations: [App, Welcome, UserStyle, ClassComponent, Userlogin, Employee, EmployeeList, Books, BookSearch, BookList, ChatApplication],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [
     provideBrowserGlobalErrorListeners(),

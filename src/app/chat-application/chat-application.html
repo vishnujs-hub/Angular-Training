@@ -1,0 +1,8 @@
+<input #inputRef type="text" placeholder="Type..." class="inputClass" />
+<br />
+<button class="buttonClass" (click)="onSend()">Send</button>
+<div *ngIf="chatArray.length > 0" class="chatBox" #chatBoxRef>
+  <ul>
+    <li *ngFor="let chat of chatArray">{{ chat }}</li>
+  </ul>
+</div>
