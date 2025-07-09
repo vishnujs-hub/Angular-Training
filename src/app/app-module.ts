@@ -20,9 +20,25 @@ import { BookList } from './book-search/book-list/book-list';
 import { ChatApplication } from './chat-application/chat-application';
 import { HostTopic } from './host-topic/host-topic';
 import { Highlight } from './customDirectives/highlight';
+import { Customcolor } from './customDirectives/customcolor';
 
 @NgModule({
-  declarations: [App, Welcome, UserStyle, ClassComponent, Userlogin, Employee, EmployeeList, Books, BookSearch, BookList, ChatApplication, HostTopic, Highlight],
+  declarations: [
+    App,
+    Welcome,
+    UserStyle,
+    ClassComponent,
+    Userlogin,
+    Employee,
+    EmployeeList,
+    Books,
+    BookSearch,
+    BookList,
+    ChatApplication,
+    HostTopic,
+    Highlight,
+    Customcolor,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [
     provideBrowserGlobalErrorListeners(),
