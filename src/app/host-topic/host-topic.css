@@ -1,11 +1,10 @@
 .bgClassIn {
   background-color: red;
-  color: white;
+  color: white !important;
   transition: background-color 0.3s;
 }
 
 .bgClassOut {
   background-color: white;
-  color: black;
   transition: background-color 0.3s;
 }
