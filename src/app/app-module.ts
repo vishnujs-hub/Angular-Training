@@ -21,6 +21,8 @@ import { ChatApplication } from './chat-application/chat-application';
 import { HostTopic } from './host-topic/host-topic';
 import { Highlight } from './customDirectives/highlight';
 import { Customcolor } from './customDirectives/customcolor';
+import { BooksearchS } from './booksearch-s/booksearch-s';
+import { BookSearchService } from './Services/book-search';
 
 @NgModule({
   declarations: [
@@ -38,11 +40,13 @@ import { Customcolor } from './customDirectives/customcolor';
     HostTopic,
     Highlight,
     Customcolor,
+    BooksearchS,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
+    BookSearchService,
   ],
   bootstrap: [App],
 })

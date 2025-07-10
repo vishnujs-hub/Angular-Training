@@ -1,0 +1,12 @@
+<ul>
+  <li *ngFor="let book of books">{{ book }}</li>
+</ul>
+
+<input #inputRef type="text" placeholder="Type..." class="inputClass" />
+<br />
+<button class="buttonClass" (click)="onSend()">Send</button>
+<div *ngIf="filteredBooks.length > 0" class="chatBox">
+  <ul>
+    <li *ngFor="let book of filteredBooks">{{ book }}</li>
+  </ul>
+</div>
