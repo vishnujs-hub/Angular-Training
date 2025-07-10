@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { BookSearchService } from '../Services/book-search';
 
 @Component({
@@ -8,7 +8,8 @@ import { BookSearchService } from '../Services/book-search';
   styleUrl: './booksearch-s.css',
 })
 export class BooksearchS {
-  constructor(private bookSearch: BookSearchService) {}
+  // constructor(private bookSearch: BookSearchService) {}
+  bookSearch = inject(BookSearchService);
   books: string[] = [];
   filteredBooks: string[] = [];
   @ViewChild('inputRef', { static: false }) inputValue!: ElementRef;

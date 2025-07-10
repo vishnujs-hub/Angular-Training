@@ -23,6 +23,7 @@ import { Highlight } from './customDirectives/highlight';
 import { Customcolor } from './customDirectives/customcolor';
 import { BooksearchS } from './booksearch-s/booksearch-s';
 import { BookSearchService } from './Services/book-search';
+import { BookSearchStore } from './book-search-store/book-search-store';
 
 @NgModule({
   declarations: [
@@ -41,12 +42,12 @@ import { BookSearchService } from './Services/book-search';
     Highlight,
     Customcolor,
     BooksearchS,
+    BookSearchStore,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
-    BookSearchService,
   ],
   bootstrap: [App],
 })
