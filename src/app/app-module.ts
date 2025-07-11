@@ -24,6 +24,7 @@ import { Customcolor } from './customDirectives/customcolor';
 import { BooksearchS } from './booksearch-s/booksearch-s';
 import { BookSearchService } from './Services/book-search';
 import { BookSearchStore } from './book-search-store/book-search-store';
+import { Observables } from './observables/observables';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { BookSearchStore } from './book-search-store/book-search-store';
     Customcolor,
     BooksearchS,
     BookSearchStore,
+    Observables,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [

@@ -1,0 +1,5 @@
+<div [ngStyle]="{ padding: '10px' }">
+  <button class="buttonClass" (click)="onClick()">Get a message</button>
+  <br /><br />
+  <p *ngIf="message">{{ message }}</p>
+</div>
