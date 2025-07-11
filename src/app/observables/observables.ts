@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Hellocomponent } from '../Services/hellocomponent';
 
 @Component({
   selector: 'observables',
@@ -10,12 +11,14 @@ import { Observable } from 'rxjs';
 export class Observables {
   message!: string;
 
-  helloObservable = new Observable((observer) => {
-    observer.next('Hello world');
-  });
+  helloService = inject(Hellocomponent);
+
+  // helloObservable = new Observable((observer) => {
+  //   observer.next('Hello world');
+  // });
 
   onClick() {
-    this.helloObservable.subscribe((val: any) => {
+    this.helloService.getHelloMessage().subscribe((val: any) => {
       this.message = val;
     });
   }
