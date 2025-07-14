@@ -27,6 +27,16 @@ import { BookSearchStore } from './book-search-store/book-search-store';
 import { Observables } from './observables/observables';
 import { ObservableBookSearch } from './observable-book-search/observable-book-search';
 import { Observablebooksearchlist } from './observable-book-search/observablebooksearchlist/observablebooksearchlist';
+import { RouterModule, Routes } from '@angular/router';
+import { Home } from './home/home';
+import { About } from './about/about';
+import { Header } from './header/header';
+
+const routes: Routes = [
+  { path: '', component: Home },
+  { path: 'Home', component: Home },
+  { path: 'About', component: About },
+];
 
 @NgModule({
   declarations: [
@@ -49,8 +59,16 @@ import { Observablebooksearchlist } from './observable-book-search/observableboo
     Observables,
     ObservableBookSearch,
     Observablebooksearchlist,
+    Home,
+    About,
+    Header,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    RouterModule.forRoot(routes),
+  ],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
