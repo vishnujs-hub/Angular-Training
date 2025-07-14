@@ -25,6 +25,8 @@ import { BooksearchS } from './booksearch-s/booksearch-s';
 import { BookSearchService } from './Services/book-search';
 import { BookSearchStore } from './book-search-store/book-search-store';
 import { Observables } from './observables/observables';
+import { ObservableBookSearch } from './observable-book-search/observable-book-search';
+import { Observablebooksearchlist } from './observable-book-search/observablebooksearchlist/observablebooksearchlist';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { Observables } from './observables/observables';
     BooksearchS,
     BookSearchStore,
     Observables,
+    ObservableBookSearch,
+    Observablebooksearchlist,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [
