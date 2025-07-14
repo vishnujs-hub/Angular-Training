@@ -1,4 +1,10 @@
-import { Component, ElementRef, inject, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  inject,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { Observablebooksearch } from '../Services/observablebooksearch';
 
 @Component({
@@ -7,7 +13,7 @@ import { Observablebooksearch } from '../Services/observablebooksearch';
   templateUrl: './observable-book-search.html',
   styleUrl: './observable-book-search.css',
 })
-export class ObservableBookSearch {
+export class ObservableBookSearch implements OnInit {
   bookSearch = inject(Observablebooksearch);
   books: string[] = [];
   filteredBooks: string[] = [];
