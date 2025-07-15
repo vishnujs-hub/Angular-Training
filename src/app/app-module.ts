@@ -31,11 +31,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { Home } from './home/home';
 import { About } from './about/about';
 import { Header } from './header/header';
+import { Course } from './course/course';
 
 const routes: Routes = [
   { path: '', component: Home },
   { path: 'Home', component: Home },
   { path: 'About', component: About },
+  { path: 'About/Course/:id', component: Course },
 ];
 
 @NgModule({
@@ -62,6 +64,7 @@ const routes: Routes = [
     Home,
     About,
     Header,
+    Course,
   ],
   imports: [
     BrowserModule,

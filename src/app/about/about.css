@@ -1,0 +1,11 @@
+.course {
+  height: 100px;
+  width: 100px;
+  background-color: blueviolet;
+  color: white;
+}
+.box {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
