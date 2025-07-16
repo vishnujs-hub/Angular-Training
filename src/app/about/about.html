@@ -1,5 +1,17 @@
 <p>Courses</p>
 <div class="box">
-  <div class="course" [routerLink]="['Course', 1]">Python</div>
+  <div class="course" [routerLink]="'Course/' + 1">Python</div>
   <div class="course" [routerLink]="['Course', 2]">Javacript</div>
 </div>
+
+<label>
+  Name:
+  <input type="text" [(ngModel)]="name" />
+</label>
+<br />
+<label>
+  Email:
+  <input type="text" [(ngModel)]="email" />
+</label>
+<br />
+<button type="button" (click)="save()">Save</button>

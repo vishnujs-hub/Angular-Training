@@ -33,13 +33,6 @@ import { About } from './about/about';
 import { Header } from './header/header';
 import { Course } from './course/course';
 
-const routes: Routes = [
-  { path: '', component: Home },
-  { path: 'Home', component: Home },
-  { path: 'About', component: About },
-  { path: 'About/Course/:id', component: Course },
-];
-
 @NgModule({
   declarations: [
     App,
@@ -66,12 +59,7 @@ const routes: Routes = [
     Header,
     Course,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    RouterModule.forRoot(routes),
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
