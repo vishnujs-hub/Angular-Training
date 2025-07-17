@@ -32,6 +32,8 @@ import { Home } from './home/home';
 import { About } from './about/about';
 import { Header } from './header/header';
 import { Course } from './course/course';
+import { DisplayApi } from './display-api/display-api';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -58,8 +60,9 @@ import { Course } from './course/course';
     About,
     Header,
     Course,
+    DisplayApi,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
