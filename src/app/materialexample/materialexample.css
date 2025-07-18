@@ -1,0 +1,33 @@
+.example-card {
+  margin: 10%;
+}
+.mat-50 {
+  width: 48%;
+  margin: 1%;
+}
+.mat-100 {
+  width: 100%;
+}
+.mat-mdc-text-field {
+  width: 100%;
+}
+.mat-mdc-card-content {
+  padding: 20px;
+}
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: white !important;
+}
+::ng-deep .save-btn {
+  background-color: blue !important;
+  color: white !important;
+}
+::ng-deep .clr-btn {
+  background-color: red !important;
+  color: white !important;
+}
+.button-row {
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  justify-content: flex-end;
+}

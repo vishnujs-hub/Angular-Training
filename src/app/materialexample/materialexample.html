@@ -1,0 +1,54 @@
+<form [formGroup]="customerForm" (ngSubmit)="saveCustomer()">
+  <mat-card class="example-card" appearance="outlined">
+    <mat-card-content>
+      <mat-form-field class="mat-50">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Enter Name..." formControlName="name" />
+      </mat-form-field>
+      <mat-form-field class="mat-50">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Enter Email..." formControlName="email" />
+      </mat-form-field>
+      <mat-form-field class="mat-50">
+        <mat-label>Contact</mat-label>
+        <input
+          type="number"
+          matInput
+          placeholder="Enter Contact..."
+          formControlName="contact"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="mat-50">
+        <mat-label>Country</mat-label>
+        <mat-select formControlName="country">
+          <mat-option *ngFor="let c of country" [value]="c">{{ c }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="mat-50">
+        <mat-label>Address</mat-label>
+        <textarea
+          matInput
+          placeholder="Enter Address"
+          formControlName="address"
+        ></textarea>
+      </mat-form-field>
+      <mat-radio-group formControlName="gender" aria-label="Gender">
+        <mat-radio-button value="Male">Male</mat-radio-button>
+        <mat-radio-button value="Female">Female</mat-radio-button>
+      </mat-radio-group>
+
+      <div class="button-row">
+        <button mat-raised-button class="save-btn" type="submit">Save</button>
+        <button
+          mat-raised-button
+          class="clr-btn"
+          type="button"
+          (click)="reset()"
+        >
+          Clear
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</form>

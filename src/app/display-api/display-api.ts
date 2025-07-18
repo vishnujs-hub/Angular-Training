@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { AfterViewChecked, Component, inject, OnInit } from '@angular/core';
 import { HttpProviderService } from '../Services/http-provider.service';
 
 interface Object {
@@ -29,6 +29,7 @@ export class DisplayApi implements OnInit {
           if (resultData) {
             this.postList = resultData;
           }
+          console.log('api postList', this.postList);
         }
       },
       (error: any) => {

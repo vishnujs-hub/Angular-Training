@@ -10,7 +10,7 @@ import { App } from './app';
 import { Welcome } from './welcome/welcome';
 import { UserStyle } from './user-style/user-style';
 import { ClassComponent } from './class-component/class-component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Userlogin } from './userlogin/userlogin';
 import { Employee } from './employee/employee';
 import { EmployeeList } from './employee/employee-list/employee-list';
@@ -34,6 +34,8 @@ import { Header } from './header/header';
 import { Course } from './course/course';
 import { DisplayApi } from './display-api/display-api';
 import { HttpClientModule } from '@angular/common/http';
+import { Materialexample } from './materialexample/materialexample';
+import { MaterialModule } from './material-module/material-module-module';
 
 @NgModule({
   declarations: [
@@ -61,8 +63,16 @@ import { HttpClientModule } from '@angular/common/http';
     Header,
     Course,
     DisplayApi,
+    Materialexample,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    MaterialModule,
+    ReactiveFormsModule,
+  ],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
